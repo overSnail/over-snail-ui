@@ -1,0 +1,58 @@
+{
+  "id": "2829794",
+  "name": "my-ui",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1257699",
+      "name": "勾选",
+      "font_class": "checked",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "15846712",
+      "name": "loading",
+      "font_class": "loading",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "8406888",
+      "name": "分享",
+      "font_class": "share",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1422715",
+      "name": "删除",
+      "font_class": "delete",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "2678637",
+      "name": "搜索",
+      "font_class": "search",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "5063840",
+      "name": "编辑",
+      "font_class": "edit",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "4118038",
+      "name": "关闭",
+      "font_class": "close",
+      "unicode": "eb6a",
+      "unicode_decimal": 60266
+    }
+  ]
+}

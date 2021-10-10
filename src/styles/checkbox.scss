@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import 'common/var';
+@import 'mixins/mixins';
+
+@include b(checkbox) {
+  box-sizing: border-box;
+  display: inline-block;
+  cursor: pointer;
+  height: 20px;
+  font-size: $--font-size-large;
+  vertical-align: top;
+  margin-right: 20px;
+  &-input {
+    display: none;
+  }
+  &-icon {
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    border: 1px solid $--border-color;
+    &:after {
+      content: '';
+      position: absolute;
+      box-sizing: border-box;
+      width: 7px;
+      height: 3px;
+      border-top: 1px solid #fff;
+      border-right: 1px solid #fff;
+      left: 3px;
+      top: 3.5px;
+      transform: rotate(135deg);
+    }
+    &-checked {
+      background: $--color-primary;
+      border-color: $--color-primary;
+      &-disabled {
+        border-color: $--color-disabled;
+        &:after {
+          border-color: $--color-disabled !important;
+        }
+      }
+    }
+    &-disabled {
+      background-color: #edf2fc;
+      &:after {
+        border-color: #edf2fc;
+      }
+    }
+    &-button {
+      display: none;
+    }
+  }
+  &-label {
+    display: inline-block;
+    height: 100%;
+    margin-left: 3px;
+  }
+  &-checked {
+    color: $--color-primary;
+    border-color: $--color-primary!important;
+    &-button {
+      color: #fff;
+      background-color: $--color-primary!important;
+      border-color: $--border-color!important;
+    }
+  }
+  &-disabled {
+    cursor: not-allowed;
+    color: $--color-disabled;
+  }
+  // border相关样式
+  &-large-border {
+    height: 40px;
+    padding: 8px 8px 12px 8px;
+    border: 1px solid $--border-color;
+    border-radius: 4px;
+  }
+  &-medium-border {
+    height: 36px;
+    padding: 6px 8px 10px 8px;
+    border: 1px solid $--border-color;
+    border-radius: 4px;
+  }
+  &-small-border {
+    height: 32px;
+    padding: 4px 8px 8px 8px;
+    border: 1px solid $--border-color;
+    border-radius: 4px;
+    font-size: $--font-size-medium;
+  }
+  &-mini-border {
+    height: 28px;
+    padding: 2px 8px 6px 8px;
+    border: 1px solid $--border-color;
+    border-radius: 4px;
+    font-size: $--font-size-medium;
+  }
+  // 按钮样式相关样式
+  &-large-button {
+    float: left;
+    background-color: #fff;
+    height: 40px;
+    line-height: 38px;
+    padding: 0 15px 0 12px;
+    margin: 0;
+    border: 1px solid $--border-color;
+  }
+  &-medium-button {
+    float: left;
+    background-color: #fff;
+    height: 36px;
+    line-height: 34px;
+    padding: 0 15px 0 12px;
+    margin: 0;
+    border: 1px solid $--border-color;
+  }
+  &-small-button {
+    float: left;
+    background-color: #fff;
+    height: 32px;
+    line-height: 30px;
+    padding: 0 15px 0 12px;
+    margin: 0;
+    border: 1px solid $--border-color;
+    font-size: $--font-size-medium;
+  }
+  &-mini-button {
+    float: left;
+    background-color: #fff;
+    height: 28px;
+    line-height: 26px;
+    padding: 0 15px 0 12px;
+    margin: 0;
+    border: 1px solid $--border-color;
+    font-size: $--font-size-medium;
+  }
+}

@@ -1,0 +1,70 @@
+<p align="center">
+    <a>
+        <img width="200" src="./assets/logo.png">
+    </a>
+</p>
+
+<h1>
+LimeUI
+    <h3>A lightweight Vue.js UI toolkit</h3>
+</h1>
+
+demo: [https://arronkler.github.io/my-ui/](https://arronkler.github.io/my-ui/)
+
+# Install
+
+Run the command below in your terminal to install limeUI first
+```
+npm install my-ui --save
+```
+
+# Usage
+
+## Global Use
+Import in your entry script file and register it
+```javascript
+import LimeUI from 'my-ui'
+import "my-ui/lib/styles/my-ui.css"
+
+Vue.use(LimeUI)
+```
+
+### Example
+
+```html
+<l-button>click</l-button>
+```
+
+## On-demand Loading
+
+Firstly, you should install `babel-plugin-component` in your project.
+```
+npm install babel-plugin-component
+```
+
+Configure your `.babelrc` file like this
+
+```json
+{
+    "plugins": [
+        ["component", {
+            "libraryName": "my-ui",
+            "libDir": "lib",
+            "styleLibrary": {
+                "name": "styles",
+                "base": false, // no base.css file
+                "path": "[module].css"
+            }
+        }]
+    ]
+}
+```
+
+The you can import component on demand, and you don't need to care about importing styles, the babel plugin will do it automaticly.
+
+```javascript
+import Vue from 'vue'
+import { Button } from 'my-ui'
+
+Vue.component('a-button', Button)
+```

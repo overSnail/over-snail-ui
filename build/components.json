@@ -1,0 +1,7 @@
+{
+  "button": "packages/button/index.js",
+  "radio": "packages/radio/index.js",
+  "checkbox": "packages/checkbox/index.js",
+  "checkbox-group": "packages/checkbox-group/index.js",
+  "input": "packages/input/index.js"
+}

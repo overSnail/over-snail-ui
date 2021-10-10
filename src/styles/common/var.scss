@@ -1,0 +1,47 @@
+// 主题颜色
+$--color-primary: #00554a !default;
+$--color-text: transparent !default;
+$--color-info: #fff !default;
+$--color-success: #67c23a !default;
+$--color-warning: #e6a23c !default;
+$--color-error: #f56c6c !default;
+
+// 尺寸
+$--size-large: 40px;
+$--size-medium: 36px;
+$--size-small: 32px;
+$--size-mini: 28px;
+
+// 字体尺寸
+$--font-size-large: 16px;
+$--font-size-medium: 14px;
+$--font-size-small: 13px;
+$--font-size-mini: 12px;
+
+// 字体颜色
+$--font-color-main: #5e6d82;
+
+// 边框颜色
+$--border-color: #dcdfe6;
+
+// 禁用色
+$--color-disabled: #c0c4cc;
+
+// 滚动条的样式
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #f8f8f8;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #dddddd;
+    border-radius: 10px;
+  }
+}

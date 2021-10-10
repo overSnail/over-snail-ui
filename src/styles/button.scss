@@ -1,0 +1,233 @@
+@charset "UTF-8";
+@import 'common/var';
+@import 'mixins/mixins';
+
+@include b(button) {
+  height: 36px;
+  font-size: $--font-size-medium;
+  position: relative;
+  color: #fff;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid transparent;
+  padding: 0 10px;
+  cursor: pointer;
+  &-primary {
+    background-color: $--color-primary;
+    border-color: $--color-primary;
+    // focus,hover的时，背景色变浅
+    &:focus,
+    &:hover {
+      background-color: rgba($--color-primary, 0.7);
+      border-color: rgba($--color-primary, 0.7);
+    }
+    &:active {
+      // active时，背景色变浅，且与focus，hover做区分
+      background-color: rgba($--color-primary, 0.9);
+      border-color: rgba($--color-primary, 0.9);
+    }
+    // disabled时，变为禁用状态
+    &-disabled {
+      cursor: not-allowed;
+      background-color: rgba($--color-primary, 0.5);
+      border-color: rgba($--color-primary, 0.5);
+      &:focus,
+      &:hover,
+      &:active {
+        background-color: rgba($--color-primary, 0.5);
+        border-color: rgba($--color-primary, 0.5);
+      }
+    }
+  }
+  &-info {
+    background-color: $--color-info;
+    border-color: #ddd;
+    color: $--font-color-main;
+    &:focus,
+    &:hover {
+      color: rgba($--font-color-main, 0.7);
+    }
+    &:active {
+      color: rgba($--font-color-main, 0.9);
+    }
+    // disabled时，变为禁用状态
+    &-disabled {
+      cursor: not-allowed;
+      color: rgba($--font-color-main, 0.5);
+      &:focus,
+      &:hover,
+      &:active {
+        color: rgba($--font-color-main, 0.5);
+      }
+    }
+  }
+  &-success {
+    background-color: $--color-success;
+    border-color: $--color-success;
+    &:focus,
+    &:hover {
+      background-color: rgba($--color-success, 0.7);
+    }
+    &:active {
+      background-color: rgba($--color-success, 0.9);
+    }
+    // disabled时，变为禁用状态
+    &-disabled {
+      cursor: not-allowed;
+      background-color: rgba($--color-success, 0.5);
+      border-color: rgba($--color-success, 0.5);
+      &:focus,
+      &:hover,
+      &:active {
+        background-color: rgba($--color-success, 0.5);
+        border-color: rgba($--color-success, 0.5);
+      }
+    }
+  }
+  &-warning {
+    background-color: $--color-warning;
+    border-color: $--color-warning;
+    &:focus,
+    &:hover {
+      background-color: rgba($--color-warning, 0.7);
+    }
+    &:active {
+      background-color: rgba($--color-warning, 0.9);
+    }
+    // disabled时，变为禁用状态
+    &-disabled {
+      cursor: not-allowed;
+      background-color: rgba($--color-warning, 0.5);
+      border-color: rgba($--color-warning, 0.5);
+      &:focus,
+      &:hover,
+      &:active {
+        background-color: rgba($--color-warning, 0.5);
+        border-color: rgba($--color-warning, 0.5);
+      }
+    }
+  }
+  &-text {
+    background-color: $--color-text;
+    border-color: $--color-text;
+    color: $--color-primary;
+    &:focus,
+    &:hover {
+      color: rgba($--color-primary, 0.7);
+    }
+    &:active {
+      color: rgba($--color-primary, 0.9);
+    }
+    // disabled时，变为禁用状态
+    &-disabled {
+      cursor: not-allowed;
+      color: rgba($--color-primary, 0.5);
+      &:focus,
+      &:hover,
+      &:active {
+        color: rgba($--color-primary, 0.5);
+      }
+    }
+  }
+  &-error {
+    background-color: $--color-error;
+    border-color: $--color-error;
+    &:focus,
+    &:hover {
+      background-color: rgba($--color-error, 0.7);
+    }
+    &:active {
+      background-color: rgba($--color-error, 0.9);
+    }
+    // disabled时，变为禁用状态
+    &-disabled {
+      cursor: not-allowed;
+      background-color: rgba($--color-error, 0.5);
+      border-color: rgba($--color-error, 0.5);
+      &:focus,
+      &:hover,
+      &:active {
+        background-color: rgba($--color-error, 0.5);
+        border-color: rgba($--color-error, 0.5);
+      }
+    }
+  }
+  // 以下是size相关样式
+  &-size {
+    &-large {
+      height: 40px;
+      line-height: 40px;
+      &-round {
+        border-radius: 20px;
+      }
+      &-circle {
+        min-width: 40px;
+        border-radius: 50%;
+      }
+    }
+    &-medium {
+      height: 36px;
+      line-height: 36px;
+      &-round {
+        border-radius: 18px;
+      }
+      &-circle {
+        min-width: 36px;
+        border-radius: 50%;
+      }
+    }
+    &-small {
+      height: 32px;
+      line-height: 32px;
+      font-size: $--font-size-small;
+      &-round {
+        border-radius: 16px;
+      }
+      &-circle {
+        padding: 0 5px;
+        min-width: 32px;
+        border-radius: 50%;
+      }
+    }
+    &-mini {
+      height: 28px;
+      line-height: 28px;
+      font-size: $--font-size-small;
+      &-round {
+        border-radius: 14px;
+      }
+      &-circle {
+        padding: 0 5px;
+        min-width: 28px;
+        border-radius: 50%;
+      }
+    }
+  }
+  // 加载中状态
+  &-loading {
+    display: inline-block;
+    animation: loading 2s linear infinite;
+  }
+  @keyframes loading {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  &-loading-layer {
+    pointer-events: none;
+    &::before {
+      pointer-events: none;
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      border-radius: inherit;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}

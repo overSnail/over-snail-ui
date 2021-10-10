@@ -1,0 +1,12 @@
+// 动画及过渡效果
+.fade-bottom-enter-active {
+  transition: all 0.25s ease;
+}
+.fade-bottom-leave-active {
+  transition: all 0.15s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.fade-bottom-enter,
+.fade-bottom-leave-to {
+  transform: translateY(40px);
+  opacity: 0;
+}
