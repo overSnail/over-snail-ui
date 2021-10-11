@@ -12,7 +12,7 @@
         'my-input-input-icon-suffix': prefixIcon,
         [`my-input-input-${size}-size`]: true,
       }"
-      type="text"
+      :type="type"
       :value="currentValue"
       @input="handleInput"
       @focus="handleFocus"
@@ -124,6 +124,10 @@ export default {
     suffixIcon: {
       type: String,
       default: '',
+    },
+    type: {
+      type: String,
+      default: "text"
     },
     // 尺寸
     size: {
