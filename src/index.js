@@ -21,7 +21,7 @@ const components = {
 const install = function (Vue, options = {}) {
 
   Object.keys(components).forEach(key => {
-    Vue.component(`my${key}`, components[key]);
+    Vue.component(`os${key}`, components[key]);
   });
 
 

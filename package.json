@@ -1,11 +1,12 @@
 {
-  "name": "my-ui",
-  "version": "1.0.0",
-  "description": "vue.js复习项目",
-  "main": "lib/my-ui.min.js",
+  "name": "over-snail-ui",
+  "version": "1.0.4",
+  "description": "vue.js学习项目，搭建UI组件库",
+  "main": "lib/over-snail-ui.min.js",
   "dependencies": {
     "async-validator": "^3.0.4",
     "core-js": "2.6.9",
+    "mathjs": "^9.5.0",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7"
   },
@@ -62,15 +63,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/overSnail/my-ui.git"
+    "url": "git+https://github.com/overSnail/over-snail-ui.git"
   },
   "keywords": [],
   "author": "ArronKler <arronkler@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/overSnail/my-ui/issues"
+    "url": "https://github.com/overSnail/over-snail-ui/issues"
   },
-  "homepage": "https://github.com/overSnail/my-ui#readme",
+  "homepage": "https://github.com/overSnail/over-snail-ui#readme",
   "peerDependencies": {
     "vue": "^2.5.2"
   },

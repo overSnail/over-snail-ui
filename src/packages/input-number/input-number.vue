@@ -117,7 +117,7 @@ export default {
      * @description 数值减少
      */
     handleDecrease() {
-      if (this.disabled || decreaseForbid) return
+      if (this.disabled || this.decreaseForbid) return
       this.currentValue = format(
         subtract(bignumber(this.currentValue), bignumber(this.step))
       )

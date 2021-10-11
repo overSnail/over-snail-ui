@@ -3,5 +3,6 @@
   "radio": "packages/radio/index.js",
   "checkbox": "packages/checkbox/index.js",
   "checkbox-group": "packages/checkbox-group/index.js",
-  "input": "packages/input/index.js"
+  "input": "packages/input/index.js",
+  "input-number": "packages/input-number/index.js"
 }

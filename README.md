@@ -1,70 +1,29 @@
-<p align="center">
-    <a>
-        <img width="200" src="./assets/logo.png">
-    </a>
-</p>
-
 <h1>
-LimeUI
-    <h3>A lightweight Vue.js UI toolkit</h3>
+OverSnailUI
+    <h3>基于vue2.x的UI组件库，仅供学习，无可用性</h3>
 </h1>
 
-demo: [https://arronkler.github.io/my-ui/](https://arronkler.github.io/my-ui/)
+这是个人基于vue2.x的复习项目，通过模仿成熟的UI组件来加深自己对Vue框架的知识掌握程度。
 
-# Install
+demo: [https://oversnail.github.io/over-snail-ui/](https://oversnail.github.io/over-snail-ui/)
 
-Run the command below in your terminal to install limeUI first
+# 安装
+
 ```
-npm install my-ui --save
+npm install over-snail-ui --save
 ```
 
-# Usage
+# 使用
 
-## Global Use
-Import in your entry script file and register it
 ```javascript
-import LimeUI from 'my-ui'
-import "my-ui/lib/styles/my-ui.css"
+import OSUI from 'over-snail-ui'
+import "over-snail-ui/lib/styles/over-snail-ui.css"
 
-Vue.use(LimeUI)
+Vue.use(OSUI)
 ```
 
-### Example
+### 示例
 
 ```html
-<l-button>click</l-button>
-```
-
-## On-demand Loading
-
-Firstly, you should install `babel-plugin-component` in your project.
-```
-npm install babel-plugin-component
-```
-
-Configure your `.babelrc` file like this
-
-```json
-{
-    "plugins": [
-        ["component", {
-            "libraryName": "my-ui",
-            "libDir": "lib",
-            "styleLibrary": {
-                "name": "styles",
-                "base": false, // no base.css file
-                "path": "[module].css"
-            }
-        }]
-    ]
-}
-```
-
-The you can import component on demand, and you don't need to care about importing styles, the babel plugin will do it automaticly.
-
-```javascript
-import Vue from 'vue'
-import { Button } from 'my-ui'
-
-Vue.component('a-button', Button)
+<os-button>click</os-button>
 ```

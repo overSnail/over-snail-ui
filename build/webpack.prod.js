@@ -14,8 +14,8 @@ module.exports = merge(webpackBaseConfig, {
   output: {
     path: path.resolve(__dirname, '../lib'),
     publicPath: '/lib/',
-    filename: 'my-ui.min.js',
-    library: 'my-ui',
+    filename: 'over-snail-ui.min.js',
+    library: 'over-snail-ui',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

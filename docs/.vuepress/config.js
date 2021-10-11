@@ -1,7 +1,7 @@
 module.exports = {
   title: 'MyUI',
-  base: '/my-ui/',
-  description: 'another lightweight ui toolkit for Vue.js 2.X',
+  base: '/over-snail-ui/',
+  description: '基于vue2.x版本的组件学习项目',
   port: 8083, 
   themeConfig: {
     nav: [
