@@ -1,10 +1,38 @@
 {
   "id": "2829794",
-  "name": "over-snail-ui",
+  "name": "my-ui",
   "font_family": "iconfont",
   "css_prefix_text": "icon-",
   "description": "",
   "glyphs": [
+    {
+      "icon_id": "7570203",
+      "name": "24gf-successCircle",
+      "font_class": "success",
+      "unicode": "e982",
+      "unicode_decimal": 59778
+    },
+    {
+      "icon_id": "145696",
+      "name": "错误提示_填充",
+      "font_class": "error",
+      "unicode": "e675",
+      "unicode_decimal": 58997
+    },
+    {
+      "icon_id": "1684788",
+      "name": "警告",
+      "font_class": "warning",
+      "unicode": "e6b6",
+      "unicode_decimal": 59062
+    },
+    {
+      "icon_id": "18170402",
+      "name": "消息,信息",
+      "font_class": "info",
+      "unicode": "e9b5",
+      "unicode_decimal": 59829
+    },
     {
       "icon_id": "1257699",
       "name": "勾选",

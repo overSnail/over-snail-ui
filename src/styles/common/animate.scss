@@ -10,3 +10,19 @@
   transform: translateY(40px);
   opacity: 0;
 }
+
+// Message-消息提示的过渡效果
+.slide-enter-active {
+  transition: all 0.5s ease;
+}
+.slide-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-enter, .slide-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+.slide-move {
+  transition: transform 0.5s;
+}

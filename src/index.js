@@ -6,6 +6,7 @@ import Checkbox from "./packages/checkbox";
 import CheckboxGroup from './packages/checkbox-group';
 import Input from './packages/input'
 import InputNumber from "./packages/input-number";
+import Message from "./packages/message";
 
 const components = {
   Button,
@@ -25,7 +26,7 @@ const install = function (Vue, options = {}) {
   });
 
 
-  // Vue.prototype.$message = Message;
+  Vue.prototype.$message = Message;
 }
 
 export default install

@@ -1,5 +1,5 @@
 ---
-title: Checkbox
+title: Checkbox 复选框
 ---
 
 # 复选框
@@ -8,13 +8,13 @@ title: Checkbox
 
 <br />
 <template>
-  <my-checkbox>选项一</my-checkbox>
-  <my-checkbox v-model="focusValue">选项二</my-checkbox>
+  <os-checkbox>选项一</os-checkbox>
+  <os-checkbox v-model="focusValue">选项二</os-checkbox>
 </template>
 
 ```html
-<my-checkbox>选项一</my-checkbox>
-<my-checkbox v-model="focusValue">选项二</my-checkbox>
+<os-checkbox>选项一</os-checkbox>
+<os-checkbox v-model="focusValue">选项二</os-checkbox>
 ```
 
 ### 禁用状态
@@ -23,13 +23,13 @@ title: Checkbox
 <br />
 
 <template>
-  <my-checkbox disabled>选项一</my-checkbox>
-  <my-checkbox v-model="focusValue" disabled>选项二</my-checkbox>
+  <os-checkbox disabled>选项一</os-checkbox>
+  <os-checkbox v-model="focusValue" disabled>选项二</os-checkbox>
 </template>
 
 ```html
-<my-checkbox disabled>选项一</my-checkbox>
-<my-checkbox v-model="focusValue" disabled>选项二</my-checkbox>
+<os-checkbox disabled>选项一</os-checkbox>
+<os-checkbox v-model="focusValue" disabled>选项二</os-checkbox>
 ```
 
 ### 多选框组
@@ -39,24 +39,24 @@ title: Checkbox
 
 <template>
   <div>
-    <my-checkbox-group v-model="food">
-    <my-checkbox label="大盘鸡">大盘鸡</my-checkbox>
-    <my-checkbox label="口水鸡">口水鸡</my-checkbox>
-    <my-checkbox label="海南鸡" disabled>海南鸡</my-checkbox>
-    <my-checkbox label="三杯鸡">三杯鸡</my-checkbox>
-  </my-checkbox-group>
+    <os-checkbox-group v-model="food">
+    <os-checkbox label="大盘鸡">大盘鸡</os-checkbox>
+    <os-checkbox label="口水鸡">口水鸡</os-checkbox>
+    <os-checkbox label="海南鸡" disabled>海南鸡</os-checkbox>
+    <os-checkbox label="三杯鸡">三杯鸡</os-checkbox>
+  </os-checkbox-group>
   <p>请点餐: {{food}}</p>
   </div>
 </template>
 
 ```html
 <div>
-  <my-checkbox-group v-model="food">
-    <my-checkbox label="大盘鸡">大盘鸡</my-checkbox>
-    <my-checkbox label="口水鸡">口水鸡</my-checkbox>
-    <my-checkbox label="海南鸡" disabled>海南鸡</my-checkbox>
-    <my-checkbox label="三杯鸡">三杯鸡</my-checkbox>
-  </my-checkbox-group>
+  <os-checkbox-group v-model="food">
+    <os-checkbox label="大盘鸡">大盘鸡</os-checkbox>
+    <os-checkbox label="口水鸡">口水鸡</os-checkbox>
+    <os-checkbox label="海南鸡" disabled>海南鸡</os-checkbox>
+    <os-checkbox label="三杯鸡">三杯鸡</os-checkbox>
+  </os-checkbox-group>
   <p>请点餐: {{food}}</p>
 </div>
 ```
@@ -68,24 +68,24 @@ title: Checkbox
 
 <template>
   <div>
-    <my-checkbox-group v-model="drinks" :min="2" :max="3">
-    <my-checkbox label="快乐水">快乐水</my-checkbox>
-    <my-checkbox label="柠檬茶">柠檬茶</my-checkbox>
-    <my-checkbox label="营养快线">营养快线</my-checkbox>
-    <my-checkbox label="哇哈哈">哇哈哈</my-checkbox>
-  </my-checkbox-group>
+    <os-checkbox-group v-model="drinks" :min="2" :max="3">
+    <os-checkbox label="快乐水">快乐水</os-checkbox>
+    <os-checkbox label="柠檬茶">柠檬茶</os-checkbox>
+    <os-checkbox label="营养快线">营养快线</os-checkbox>
+    <os-checkbox label="哇哈哈">哇哈哈</os-checkbox>
+  </os-checkbox-group>
   <p>请选择天赋[最少2个，最多3个]: {{drinks}}</p>
   </div>
 </template>
 
 ```html
 <div>
-  <my-checkbox-group v-model="drinks" :min="2" :max="3">
-    <my-checkbox label="快乐水">快乐水</my-checkbox>
-    <my-checkbox label="柠檬茶">柠檬茶</my-checkbox>
-    <my-checkbox label="营养快线">营养快线</my-checkbox>
-    <my-checkbox label="哇哈哈">哇哈哈</my-checkbox>
-  </my-checkbox-group>
+  <os-checkbox-group v-model="drinks" :min="2" :max="3">
+    <os-checkbox label="快乐水">快乐水</os-checkbox>
+    <os-checkbox label="柠檬茶">柠檬茶</os-checkbox>
+    <os-checkbox label="营养快线">营养快线</os-checkbox>
+    <os-checkbox label="哇哈哈">哇哈哈</os-checkbox>
+  </os-checkbox-group>
   <p>请选择天赋[最少2个，最多3个]: {{drinks}}</p>
 </div>
 ```
@@ -96,31 +96,31 @@ title: Checkbox
 <template>
   <div>
     <div>
-      <my-checkbox border size="small">选项一</my-checkbox>
-      <my-checkbox border size="small">选项二</my-checkbox>
+      <os-checkbox border size="small">选项一</os-checkbox>
+      <os-checkbox border size="small">选项二</os-checkbox>
     </div>
     <br />
-    <my-checkbox-group v-model="drinks">
-    <my-checkbox label="快乐水" border>快乐水</my-checkbox>
-    <my-checkbox label="柠檬茶" border>柠檬茶</my-checkbox>
-    <my-checkbox label="营养快线" border>营养快线</my-checkbox>
-    <my-checkbox label="哇哈哈" border>哇哈哈</my-checkbox>
-  </my-checkbox-group>
+    <os-checkbox-group v-model="drinks">
+    <os-checkbox label="快乐水" border>快乐水</os-checkbox>
+    <os-checkbox label="柠檬茶" border>柠檬茶</os-checkbox>
+    <os-checkbox label="营养快线" border>营养快线</os-checkbox>
+    <os-checkbox label="哇哈哈" border>哇哈哈</os-checkbox>
+  </os-checkbox-group>
   </div>
 </template>
 
 ```html
 <div>
   <div>
-    <my-checkbox border size="small">选项一</my-checkbox>
-    <my-checkbox border size="small">选项二</my-checkbox>
+    <os-checkbox border size="small">选项一</os-checkbox>
+    <os-checkbox border size="small">选项二</os-checkbox>
   </div>
-  <my-checkbox-group v-model="drinks">
-    <my-checkbox label="快乐水" border>快乐水</my-checkbox>
-    <my-checkbox label="柠檬茶" border>柠檬茶</my-checkbox>
-    <my-checkbox label="营养快线" border>营养快线</my-checkbox>
-    <my-checkbox label="哇哈哈" border>哇哈哈</my-checkbox>
-  </my-checkbox-group>
+  <os-checkbox-group v-model="drinks">
+    <os-checkbox label="快乐水" border>快乐水</os-checkbox>
+    <os-checkbox label="柠檬茶" border>柠檬茶</os-checkbox>
+    <os-checkbox label="营养快线" border>营养快线</os-checkbox>
+    <os-checkbox label="哇哈哈" border>哇哈哈</os-checkbox>
+  </os-checkbox-group>
 </div>
 ```
 
@@ -129,36 +129,36 @@ title: Checkbox
 <br />
 <template>
   <div>
-    <my-checkbox-group v-model="drinks" button>
-    <my-checkbox label="快乐水">快乐水</my-checkbox>
-    <my-checkbox label="柠檬茶">柠檬茶</my-checkbox>
-    <my-checkbox label="营养快线">营养快线</my-checkbox>
-    <my-checkbox label="哇哈哈">哇哈哈</my-checkbox>
-  </my-checkbox-group>
+    <os-checkbox-group v-model="drinks" button>
+    <os-checkbox label="快乐水">快乐水</os-checkbox>
+    <os-checkbox label="柠檬茶">柠檬茶</os-checkbox>
+    <os-checkbox label="营养快线">营养快线</os-checkbox>
+    <os-checkbox label="哇哈哈">哇哈哈</os-checkbox>
+  </os-checkbox-group>
   <br />
-  <my-checkbox-group v-model="drinks" button>
-    <my-checkbox label="快乐水" size="mini">快乐水</my-checkbox>
-    <my-checkbox label="柠檬茶" size="mini">柠檬茶</my-checkbox>
-    <my-checkbox label="营养快线" size="mini">营养快线</my-checkbox>
-    <my-checkbox label="哇哈哈" size="mini">哇哈哈</my-checkbox>
-  </my-checkbox-group>
+  <os-checkbox-group v-model="drinks" button>
+    <os-checkbox label="快乐水" size="mini">快乐水</os-checkbox>
+    <os-checkbox label="柠檬茶" size="mini">柠檬茶</os-checkbox>
+    <os-checkbox label="营养快线" size="mini">营养快线</os-checkbox>
+    <os-checkbox label="哇哈哈" size="mini">哇哈哈</os-checkbox>
+  </os-checkbox-group>
   </div>
 </template>
 
 ```html
 <div>
-  <my-checkbox-group v-model="drinks" button>
-    <my-checkbox label="快乐水">快乐水</my-checkbox>
-    <my-checkbox label="柠檬茶">柠檬茶</my-checkbox>
-    <my-checkbox label="营养快线">营养快线</my-checkbox>
-    <my-checkbox label="哇哈哈">哇哈哈</my-checkbox>
-  </my-checkbox-group>
-  <my-checkbox-group v-model="drinks" button>
-    <my-checkbox label="快乐水" size="mini">快乐水</my-checkbox>
-    <my-checkbox label="柠檬茶" size="mini">柠檬茶</my-checkbox>
-    <my-checkbox label="营养快线" size="mini">营养快线</my-checkbox>
-    <my-checkbox label="哇哈哈" size="mini">哇哈哈</my-checkbox>
-  </my-checkbox-group>
+  <os-checkbox-group v-model="drinks" button>
+    <os-checkbox label="快乐水">快乐水</os-checkbox>
+    <os-checkbox label="柠檬茶">柠檬茶</os-checkbox>
+    <os-checkbox label="营养快线">营养快线</os-checkbox>
+    <os-checkbox label="哇哈哈">哇哈哈</os-checkbox>
+  </os-checkbox-group>
+  <os-checkbox-group v-model="drinks" button>
+    <os-checkbox label="快乐水" size="mini">快乐水</os-checkbox>
+    <os-checkbox label="柠檬茶" size="mini">柠檬茶</os-checkbox>
+    <os-checkbox label="营养快线" size="mini">营养快线</os-checkbox>
+    <os-checkbox label="哇哈哈" size="mini">哇哈哈</os-checkbox>
+  </os-checkbox-group>
 </div>
 ```
 

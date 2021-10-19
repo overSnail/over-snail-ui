@@ -8,13 +8,13 @@ title: Input-Number 计数器
 
 <br />
 <template>
-  <my-input-number v-model="inputValue"></my-input-number>
+  <os-input-number v-model="inputValue"></os-input-number>
   <div>输入的值是: {{inputValue}}</div>
 </template>
 
 ```vue
 <template>
-  <my-input-number v-model="inputValue"></my-input-number>
+  <os-input-number v-model="inputValue"></os-input-number>
   <div>输入的值是: {{inputValue}}</div>
 </template>
 <script>
@@ -32,13 +32,13 @@ export default {
 <br />
 
 <template>
-  <my-input-number v-model="inputValue" disabled></my-input-number>
+  <os-input-number v-model="inputValue" disabled></os-input-number>
   <div>输入的值是: {{inputValue}}</div>
 </template>
 
 ```vue
 <template>
-  <my-input-number v-model="inputValue" disabled></my-input-number>
+  <os-input-number v-model="inputValue" disabled></os-input-number>
   <div>输入的值是: {{inputValue}}</div>
 </template>
 <script>
@@ -56,13 +56,13 @@ export default {
 <br />
 
 <template>
-  <my-input-number v-model="inputValue" :step="3"></my-input-number>
+  <os-input-number v-model="inputValue" :step="3"></os-input-number>
   <div>输入的值是: {{inputValue}}</div>
 </template>
 
 ```vue
 <template>
-  <my-input-number v-model="inputValue" :step="3"></my-input-number>
+  <os-input-number v-model="inputValue" :step="3"></os-input-number>
   <div>输入的值是: {{inputValue}}</div>
 </template>
 <script>
@@ -80,13 +80,13 @@ export default {
 <br />
 
 <template>
-  <my-input-number v-model="strictValue" :step="3" :step-strictly="true"></my-input-number>
+  <os-input-number v-model="strictValue" :step="3" :step-strictly="true"></os-input-number>
   <div>输入的值是: {{strictValue}}</div>
 </template>
 
 ```vue
 <template>
-  <my-input-number v-model="strictValue" :step="3" :step-strictly="true"></my-input-number>
+  <os-input-number v-model="strictValue" :step="3" :step-strictly="true"></os-input-number>
   <div>输入的值是: {{strictValue}}</div>
 </template>
 <script>
@@ -104,13 +104,13 @@ export default {
 <br />
 
 <template>
-  <my-input-number v-model="precisionValue" :step="0.12" :precision="2"></my-input-number>
+  <os-input-number v-model="precisionValue" :step="0.12" :precision="2"></os-input-number>
   <div>输入的值是: {{precisionValue}}</div>
 </template>
 
 ```vue
 <template>
-  <my-input-number v-model="precisionValue" :step="0.12" :precision="2"></my-input-number>
+  <os-input-number v-model="precisionValue" :step="0.12" :precision="2"></os-input-number>
   <div>输入的值是: {{precisionValue}}</div>
 </template>
 <script>
@@ -128,13 +128,13 @@ export default {
 <br />
 
 <template>
-  <my-input-number v-model="limitValue" :max="1" :min="-1"></my-input-number>
+  <os-input-number v-model="limitValue" :max="1" :min="-1"></os-input-number>
   <div>输入的值是: {{limitValue}}</div>
 </template>
 
 ```vue
 <template>
-  <my-input-number v-model="limitValue" :max="1" :min="-1"></my-input-number>
+  <os-input-number v-model="limitValue" :max="1" :min="-1"></os-input-number>
   <div>输入的值是: {{limitValue}}</div>
 </template>
 <script>
@@ -152,21 +152,21 @@ export default {
 <br />
 
 <template>
-  <my-input-number size="large"></my-input-number>
+  <os-input-number size="large"></os-input-number>
   <br />
-  <my-input-number size="medium"></my-input-number>
+  <os-input-number size="medium"></os-input-number>
   <br />
-  <my-input-number size="small"></my-input-number>
+  <os-input-number size="small"></os-input-number>
   <br />
-  <my-input-number size="mini"></my-input-number>
+  <os-input-number size="mini"></os-input-number>
 </template>
 
 ```vue
 <template>
-  <my-input-number size="large"></my-input-number>
-  <my-input-number size="medium"></my-input-number>
-  <my-input-number size="small"></my-input-number>
-  <my-input-number size="mini"></my-input-number>
+  <os-input-number size="large"></os-input-number>
+  <os-input-number size="medium"></os-input-number>
+  <os-input-number size="small"></os-input-number>
+  <os-input-number size="mini"></os-input-number>
 </template>
 ```
 

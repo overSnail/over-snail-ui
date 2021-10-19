@@ -67,7 +67,7 @@ export default {
 
 <br />
 <template>
-  <my-input v-model="inputValue"></my-input>
+  <os-input v-model="inputValue"></os-input>
   <div>输入的值是: {{inputValue}}</div>
 </template>
 
@@ -91,12 +91,12 @@ export default {
 
 <br />
 <template>
-  <my-input v-model="inputValue" disabled></my-input>
+  <os-input v-model="inputValue" disabled></os-input>
 </template>
 
 ```html
 <template>
-  <my-input v-model="inputValue" disabled></my-input>
+  <os-input v-model="inputValue" disabled></os-input>
 </template>
 ```
 
@@ -104,12 +104,12 @@ export default {
 
 <br />
 <template>
-  <my-input v-model="inputValue" clearable></my-input>
+  <os-input v-model="inputValue" clearable></os-input>
 </template>
 
 ```html
 <template>
-  <my-input v-model="inputValue" clearable></my-input>
+  <os-input v-model="inputValue" clearable></os-input>
 </template>
 ```
 
@@ -117,16 +117,16 @@ export default {
 
 <br />
 <template>
-  <my-input v-model="inputValue" prefix-icon="icon-search"></my-input>
-  <my-input v-model="inputValue" suffix-icon="icon-edit"></my-input>
-  <my-input v-model="inputValue" suffix-icon="icon-edit" clearable></my-input>
+  <os-input v-model="inputValue" prefix-icon="icon-search"></os-input>
+  <os-input v-model="inputValue" suffix-icon="icon-edit"></os-input>
+  <os-input v-model="inputValue" suffix-icon="icon-edit" clearable></os-input>
 </template>
 
 ```html
 <template>
-  <my-input v-model="inputValue" prefix-icon="icon-search"></my-input>
-  <my-input v-model="inputValue" suffix-icon="icon-edit"></my-input>
-  <my-input v-model="inputValue" suffix-icon="icon-edit" clearable></my-input>
+  <os-input v-model="inputValue" prefix-icon="icon-search"></os-input>
+  <os-input v-model="inputValue" suffix-icon="icon-edit"></os-input>
+  <os-input v-model="inputValue" suffix-icon="icon-edit" clearable></os-input>
 </template>
 ```
 
@@ -135,19 +135,19 @@ export default {
 <br />
 <template>
   <div style="margin-bottom: 20px">
-    <my-input v-model="inputValue" suffix-icon="icon-edit" size="large" />
-    <my-input v-model="inputValue" suffix-icon="icon-edit" />
+    <os-input v-model="inputValue" suffix-icon="icon-edit" size="large" />
+    <os-input v-model="inputValue" suffix-icon="icon-edit" />
   </div>
-  <my-input v-model="inputValue" suffix-icon="icon-edit" size="small" />
-  <my-input v-model="inputValue" suffix-icon="icon-edit" size="mini" />
+  <os-input v-model="inputValue" suffix-icon="icon-edit" size="small" />
+  <os-input v-model="inputValue" suffix-icon="icon-edit" size="mini" />
 </template>
 
 ```html
 <template>
-  <my-input v-model="inputValue" suffix-icon="icon-edit" size="large" />
-  <my-input v-model="inputValue" suffix-icon="icon-edit" />
-  <my-input v-model="inputValue" suffix-icon="icon-edit" size="small" />
-  <my-input v-model="inputValue" suffix-icon="icon-edit" size="mini" />
+  <os-input v-model="inputValue" suffix-icon="icon-edit" size="large" />
+  <os-input v-model="inputValue" suffix-icon="icon-edit" />
+  <os-input v-model="inputValue" suffix-icon="icon-edit" size="small" />
+  <os-input v-model="inputValue" suffix-icon="icon-edit" size="mini" />
 </template>
 ```
 
@@ -155,7 +155,7 @@ export default {
 
 <br />
 <template>
-  <my-input v-model="inputValue" suffix-icon="icon-edit" clearable suggestion :fetch-suggestions="querySearch"/>
+  <os-input v-model="inputValue" suffix-icon="icon-edit" clearable suggestion :fetch-suggestions="querySearch"/>
 </template>
 
 <br />
@@ -164,7 +164,7 @@ export default {
 
 ```vue
 <template>
-  <my-input
+  <os-input
     v-model="inputValue"
     suffix-icon="icon-edit"
     suggestion
@@ -210,7 +210,7 @@ export default {
 
 <br />
 <template>
-  <my-input
+  <os-input
     v-model="inputValue"
     clearable
     suggestion
@@ -220,12 +220,12 @@ export default {
       <span>{{item.value}}</span>
       <span style="float: right;color: gold">{{item.price}}元</span>
     </template>
-  </my-input>
+  </os-input>
 </template>
 
 ```html
 <template>
-  <my-input
+  <os-input
     v-model="inputValue"
     clearable
     suggestion
@@ -235,7 +235,7 @@ export default {
       <span>{{item.value}}</span>
       <span style="float: right;color: gold">{{item.price}}元</span>
     </template>
-  </my-input>
+  </os-input>
 </template>
 ```
 
@@ -243,7 +243,7 @@ export default {
 
 <br />
 <template>
-  <my-input
+  <os-input
     v-model="inputValue"
     clearable
     suggestion
@@ -253,12 +253,12 @@ export default {
       <span>{{item.value}}</span>
       <span style="float: right;color: gold">{{item.price}}元</span>
     </template>
-  </my-input>
+  </os-input>
 </template>
 
 ```html
 <template>
-  <my-input
+  <os-input
     v-model="inputValue"
     clearable
     suggestion
@@ -268,7 +268,7 @@ export default {
       <span>{{item.value}}</span>
       <span style="float: right;color: gold">{{item.price}}元</span>
     </template>
-  </my-input>
+  </os-input>
 </template>
 ```
 

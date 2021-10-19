@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@import 'common/var';
+@import 'mixins/mixins';
+
+@include b(message) {
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  &-cell {
+    position: fixed;
+    left: calc(50% - 200px);
+    top: 40px;
+    box-sizing: border-box;
+    width: 400px;
+    padding: 15px 10px 15px 15px;
+    background-color: #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    &-icon {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      margin-right: 10px;
+    }
+    &-text {
+      font-size: $--font-size-medium;
+      margin-right: 10px;
+    }
+    &-close {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      margin-left: auto;
+      cursor: pointer;
+      color: #888;
+      &:hover {
+        color: #000;
+      }
+    }
+    // 类型相关
+    &-success {
+      background-color: lighten($--color-success, 40%);
+      border-color: $--color-success;
+      color: $--color-success;
+    }
+    &-warning {
+      background-color: lighten($--color-warning, 40%);
+      border-color: $--color-warning;
+      color: $--color-warning;
+    }
+    &-error {
+      background-color: lighten($--color-error, 20%);
+      border-color: $--color-error;
+      color: $--color-error;
+    }
+  }
+}

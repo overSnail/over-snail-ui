@@ -8,31 +8,31 @@ title: Radio 单选框
 
 <br />
 <template>
-  <my-radio v-model="currentValue" label="1">大闸蟹</my-radio>
-  <my-radio v-model="currentValue" label="2">兰花蟹</my-radio>
-  <my-radio v-model="currentValue" label="3">青蟹</my-radio>
+  <os-radio v-model="currentValue" label="1">大闸蟹</os-radio>
+  <os-radio v-model="currentValue" label="2">兰花蟹</os-radio>
+  <os-radio v-model="currentValue" label="3">青蟹</os-radio>
   <div>选择：{{currentValue}}</div>
 </template>
 
 ```html
-<my-radio v-model="currentValue" label="1">大闸蟹</my-radio>
-<my-radio v-model="currentValue" label="2">兰花蟹</my-radio>
-<my-radio v-model="currentValue" label="3">青蟹</my-radio>
+<os-radio v-model="currentValue" label="1">大闸蟹</os-radio>
+<os-radio v-model="currentValue" label="2">兰花蟹</os-radio>
+<os-radio v-model="currentValue" label="3">青蟹</os-radio>
 <div>选择：{{currentValue}}</div>
 ```
 
 ### 禁用状态
 <br />
 <template>
-  <my-radio v-model="currentValue" label="1" disabled>大闸蟹</my-radio>
-  <my-radio label="2" disabled>兰花蟹</my-radio>
-  <my-radio label="3" disabled>青蟹</my-radio>
+  <os-radio v-model="currentValue" label="1" disabled>大闸蟹</os-radio>
+  <os-radio label="2" disabled>兰花蟹</os-radio>
+  <os-radio label="3" disabled>青蟹</os-radio>
 </template>
 
 ```html
-<my-radio v-model="currentValue" label="1" disabled>大闸蟹</my-radio>
-<my-radio label="2" disabled>兰花蟹</my-radio>
-<my-radio label="3" disabled>青蟹</my-radio>
+<os-radio v-model="currentValue" label="1" disabled>大闸蟹</os-radio>
+<os-radio label="2" disabled>兰花蟹</os-radio>
+<os-radio label="3" disabled>青蟹</os-radio>
 ```
 
 ### 单选框组
@@ -40,68 +40,68 @@ title: Radio 单选框
 
 <br />
 <template>
-  <my-radio-group v-model="groupValue">
-    <my-radio label="1">大闸蟹</my-radio>
-    <my-radio label="2">兰花蟹</my-radio>
-    <my-radio label="3">青蟹</my-radio>
-  </my-radio-group>
+  <os-radio-group v-model="groupValue">
+    <os-radio label="1">大闸蟹</os-radio>
+    <os-radio label="2">兰花蟹</os-radio>
+    <os-radio label="3">青蟹</os-radio>
+  </os-radio-group>
   <div>选择的值：{{groupValue}}</div>
   
   <p>单选框组禁用状态</p>
-  <my-radio-group v-model="groupValue" disabled>
-    <my-radio label="1">大闸蟹</my-radio>
-    <my-radio label="2">兰花蟹</my-radio>
-    <my-radio label="3">青蟹</my-radio>
-  </my-radio-group>
+  <os-radio-group v-model="groupValue" disabled>
+    <os-radio label="1">大闸蟹</os-radio>
+    <os-radio label="2">兰花蟹</os-radio>
+    <os-radio label="3">青蟹</os-radio>
+  </os-radio-group>
 </template>
 
 ```html
-<my-radio-group v-model="groupValue">
-  <my-radio label="1">大闸蟹</my-radio>
-  <my-radio label="2">兰花蟹</my-radio>
-  <my-radio label="3">青蟹</my-radio>
-</my-radio-group>
+<os-radio-group v-model="groupValue">
+  <os-radio label="1">大闸蟹</os-radio>
+  <os-radio label="2">兰花蟹</os-radio>
+  <os-radio label="3">青蟹</os-radio>
+</os-radio-group>
 <div>选择的值：{{groupValue}}</div>
-<my-radio-group v-model="groupValue" disabled>
-  <my-radio label="1">大闸蟹</my-radio>
-  <my-radio label="2">兰花蟹</my-radio>
-  <my-radio label="3">青蟹</my-radio>
-</my-radio-group>
+<os-radio-group v-model="groupValue" disabled>
+  <os-radio label="1">大闸蟹</os-radio>
+  <os-radio label="2">兰花蟹</os-radio>
+  <os-radio label="3">青蟹</os-radio>
+</os-radio-group>
 ```
 
 ### 带有边框
 <br />
 <template>
-  <my-radio label="1" border size="large" disabled v-model="groupValue">大闸蟹</my-radio>
-  <my-radio label="2" border>兰花蟹</my-radio>
-  <my-radio label="3" border size="small">青蟹</my-radio>
-  <my-radio label="4" border size="mini">帝王蟹</my-radio>
+  <os-radio label="1" border size="large" disabled v-model="groupValue">大闸蟹</os-radio>
+  <os-radio label="2" border>兰花蟹</os-radio>
+  <os-radio label="3" border size="small">青蟹</os-radio>
+  <os-radio label="4" border size="mini">帝王蟹</os-radio>
 </template>
 
 ```html
-<my-radio label="1" border size="large" disabled v-model="groupValue">大闸蟹</my-radio>
-<my-radio label="2" border>兰花蟹</my-radio>
-<my-radio label="3" border size="small">青蟹</my-radio>
-<my-radio label="4" border size="mini">帝王蟹</my-radio>
+<os-radio label="1" border size="large" disabled v-model="groupValue">大闸蟹</os-radio>
+<os-radio label="2" border>兰花蟹</os-radio>
+<os-radio label="3" border size="small">青蟹</os-radio>
+<os-radio label="4" border size="mini">帝王蟹</os-radio>
 ```
 
 ### 按钮样式
 <br />
 <template>
-<my-radio-group v-model="groupValue" button>
-  <my-radio label="1">大闸蟹</my-radio>
-  <my-radio label="2">兰花蟹</my-radio>
-  <my-radio label="3">青蟹</my-radio>
-</my-radio-group>
+<os-radio-group v-model="groupValue" button>
+  <os-radio label="1">大闸蟹</os-radio>
+  <os-radio label="2">兰花蟹</os-radio>
+  <os-radio label="3">青蟹</os-radio>
+</os-radio-group>
 </template>
 
 ```html
 <template>
-<my-radio-group v-model="groupValue" button>
-  <my-radio label="1">大闸蟹</my-radio>
-  <my-radio label="2">兰花蟹</my-radio>
-  <my-radio label="3">青蟹</my-radio>
-</my-radio-group>
+<os-radio-group v-model="groupValue" button>
+  <os-radio label="1">大闸蟹</os-radio>
+  <os-radio label="2">兰花蟹</os-radio>
+  <os-radio label="3">青蟹</os-radio>
+</os-radio-group>
 </template>
 ```
 
