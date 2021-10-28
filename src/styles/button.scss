@@ -45,10 +45,11 @@
     color: $--font-color-main;
     &:focus,
     &:hover {
-      color: rgba($--font-color-main, 0.7);
+      color: rgba($--color-primary, 0.5);
+      border-color: rgba($--color-primary, 0.5);
     }
     &:active {
-      color: rgba($--font-color-main, 0.9);
+      color: rgba($--color-primary, 1);
     }
     // disabled时，变为禁用状态
     &-disabled {

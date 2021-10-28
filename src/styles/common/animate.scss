@@ -26,3 +26,69 @@
 .slide-move {
   transition: transform 0.5s;
 }
+
+// MessageBox 弹框的过渡效果
+.messagebox-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.messagebox-fade-leave-active {
+  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.messagebox-fade-enter, .messagebox-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+// Notice-消息提示的过渡效果：top-right
+.slide-right-enter-active {
+  transition: all 0.5s ease;
+}
+
+.slide-right-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-right-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.slide-right-leave-to {
+  opacity: 0;
+}
+.slide-right-move {
+  transition: transform 0.5s;
+}
+
+// Notice-消息提示的过渡效果：top-right
+.slide-left-enter-active {
+  transition: all 0.5s ease;
+}
+
+.slide-left-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-left-enter {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.slide-left-leave-to {
+  opacity: 0;
+}
+.slide-left-move {
+  transition: transform 0.5s;
+}
+
+
+// Alert-警告的过渡效果
+.fade-enter-active {
+  transition: all 0.3s ease;
+}
+.fade-leave-active {
+  transition: all 0.3s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

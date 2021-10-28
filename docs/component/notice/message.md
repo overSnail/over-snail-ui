@@ -1,5 +1,6 @@
 ---
 title: Message 消息提示
+pageClass: os-page-class
 ---
 
 ### 基础用法

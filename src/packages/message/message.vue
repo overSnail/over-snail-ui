@@ -9,10 +9,16 @@
         :style="{ top: `${item.top}px` }"
         :ref="item.key"
       >
-        <i class="my-message-cell-icon iconfont" :class="{[`icon-${item.type}`]:true}" />
-        
-        <div class="my-message-cell-text" v-if="item.useHTMLString" v-html="item.message">
-        </div>
+        <i
+          class="my-message-cell-icon iconfont"
+          :class="{ [`icon-${item.type}`]: true }"
+        />
+
+        <div
+          class="my-message-cell-text"
+          v-if="item.useHTMLString"
+          v-html="item.message"
+        ></div>
         <div class="my-message-cell-text" v-else>
           {{ item.message }}
         </div>
@@ -33,9 +39,9 @@ export default {
     return {
       // 消息列表
       messageList: [],
+      offsetTop: 20, // 当前消息的基础偏移量
     }
   },
-
   methods: {
     /**
      * @description 添加新消息
@@ -48,16 +54,19 @@ export default {
         另一个是作为删除时的遍历依据
       */
       const key = `i-need-key-by-random-${Math.random()}`
-      const top = 20 + 70 * this.messageList.length
-      const { duration, message,showClose, type, useHTMLString } = params
+      const { duration, message, showClose, type, useHTMLString } = params
 
       this.messageList.push({
         message: message,
         showClose,
         useHTMLString,
         type: type || 'info',
-        top,
+        top: this.offsetTop,
         key,
+      })
+
+      this.$nextTick(() => {
+        this.offsetTop += this.$refs[key][0].clientHeight + 20
       })
 
       // 持续时间，传0则不关闭
@@ -72,7 +81,17 @@ export default {
      */
     remove(key) {
       const index = this.messageList.findIndex((cell) => cell.key === key)
+      const height = this.$refs[key][0].clientHeight + 20
+      this.offsetTop -= height
+
+
       this.messageList.splice(index, 1)
+      this.messageList.forEach((cell, i) => {
+        console.log(i, index);
+        if (i >= index) {
+          cell.top -= height
+        }
+      })
     },
   },
 }

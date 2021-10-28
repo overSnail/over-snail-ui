@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import 'common/reset';
+@import 'common/var';
+@import 'mixins/mixins';
+
+
+@include b(alert) {
+  margin-top: 20px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  border-radius: 8px;
+  padding: 10px 30px 10px 10px;
+  background-color: #ddd;
+  font-size: $--font-size-medium;
+  align-items: center;
+  &-icon {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 10px;
+    &-large {
+      height: 40px;
+      line-height: 40px;
+      font-size: 24px;
+    }
+  }
+  &-content {
+    padding-left: 5px;
+    &-description {
+      font-size: 12px;
+    }
+  }
+  &-close {
+    min-width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    &:hover {
+      color: #000;
+    }
+  }
+  &-light-success {
+    background-color: lighten($--color-success, 45%);
+    color: $--color-success;
+  }
+  &-light-warning {
+    background-color: lighten($--color-warning, 35%);
+    color: $--color-warning;
+  }
+  &-light-error {
+    background-color: lighten($--color-error, 25%);
+    color: $--color-error;
+  }
+  &-dark-success {
+    background-color: $--color-success;
+    color: #fff;
+  }
+  &-dark-warning {
+    background-color: $--color-warning;
+    color: #fff;
+  }
+  &-dark-error {
+    background-color: $--color-error;
+    color: #fff;
+  }
+  &-dark-info {
+    background-color: #ccc;
+    color: #fff;
+  }
+}
