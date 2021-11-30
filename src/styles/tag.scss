@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@import "common/var";
+@import "common/reset";
+@import "mixins/mixins";
+
+@include b(tag) {
+  display: inline-block;
+  line-height: 18px;
+  padding: 6px 5px;
+  height: 18px;
+  background-color: lighten($--color-primary, 75%);
+  color: $--color-primary;
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid lighten($--color-primary, 50%);
+  &-close {
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  &-size-medium {
+    padding: 4px 5px;
+  }
+  &-size-small {
+    padding: 2px 5px;
+  }
+  &-size-mini {
+    padding: 0px 5px;
+  }
+  &-light-success {
+    background-color: lighten($--color-success, 45%);
+    border: 1px solid lighten($--color-success, 20%);
+    color: $--color-success;
+  }
+  &-light-warning {
+    background-color: lighten($--color-warning, 35%);
+    border: 1px solid lighten($--color-warning, 20%);
+    color: $--color-warning;
+  }
+  &-light-text {
+    background-color: lighten($--color-text, 35%);
+    border: 1px solid lighten($--color-text, 20%);
+    color: $--color-text;
+  }
+  &-light-error {
+    background-color: lighten($--color-error, 25%);
+    border: 1px solid lighten($--color-error, 20%);
+    color: $--color-error;
+  }
+  &-dark-primary {
+    background-color: $--color-primary;
+    border-color: $--color-primary;
+    color: #fff;
+  }
+  &-dark-success {
+    background-color: $--color-success;
+    border-color: $--color-success;
+    color: #fff;
+  }
+  &-dark-warning {
+    background-color: $--color-warning;
+    border-color: $--color-warning;
+    color: #fff;
+  }
+  &-dark-text {
+    background-color: $--color-text;
+    border-color: $--color-text;
+    color: #fff;
+  }
+  &-dark-error {
+    background-color: $--color-error;
+    border-color: $--color-error;
+    color: #fff;
+  }
+  &-plain-primary {
+    background-color: #fff;
+    border-color: $--color-primary;
+    color: $--color-primary;
+  }
+  &-plain-success {
+    background-color: #fff;
+    border-color: $--color-success;
+    color: $--color-success;
+  }
+  &-plain-warning {
+    background-color: #fff;
+    border-color: $--color-warning;
+    color: $--color-warning;
+  }
+  &-plain-text {
+    background-color: #fff;
+    border-color: $--color-text;
+    color: $--color-text;
+  }
+  &-plain-error {
+    background-color: #fff;
+    border-color: $--color-error;
+    color: $--color-error;
+  }
+}

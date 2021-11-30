@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@import "common/reset";
+@import "common/var";
+@import "mixins/mixins";
+
+@include b(datepage) {
+  width: auto;
+  transform-origin: center top;
+  z-index: 2367;
+  position: absolute;
+  top: $default-height + 8px;
+  left: 0;
+  border: solid 1px #e4e7ed;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 10px 13px;
+  display: flex;
+  // 以下为日历页的样式
+  &-cell {
+    width: 212px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &-title {
+      display: flex;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+  &-control {
+    font-size: 14px;
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+    color: #666;
+    &:hover {
+      color: $--color-primary;
+    }
+  }
+  &-year {
+    font-size: 14px;
+    text-align: center;
+    flex: 3;
+  }
+  &-header {
+    padding: 10px 0 3px 0;
+    display: flex;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ddd;
+    &-cell {
+      flex: 1;
+      text-align: center;
+      font-size: 13px;
+    }
+  }
+  &-table {
+    display: flex;
+    flex-wrap: wrap;
+    &-cell {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 13px;
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        color: $--color-primary;
+      }
+      span {
+        display: block;
+        border-radius: 50%;
+      }
+    }
+    &-now {
+      color: $--color-primary;
+      font-weight: bold;
+    }
+    &-nomonth {
+      opacity: 0.5;
+    }
+    &-selected {
+      background-color: $--color-primary;
+      color: #fff;
+    }
+  }
+}

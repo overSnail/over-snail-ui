@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@import "common/var";
+@import "common/reset";
+@import "mixins/mixins";
+
+@include b(option-group) {
+  margin: 7px 0;
+  border-bottom: 1px solid #eee;
+  &-title {
+    padding-left: 15px;
+    font-size: 12px;
+    color: #999;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@import "common/var";
+@import "common/reset";
+@import "mixins/mixins";
+
+@include b(switch) {
+  display: inline-block;
+  line-height: 22px;
+  &-input {
+    display: none;
+  }
+  &-dot {
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    height: 22px;
+    background-color: #d8d8d8;
+    border-radius: 11px;
+    box-sizing: border-box;
+    border: 1px solid #d8d8d8;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      border-radius: 100%;
+      transition: all 0.3s;
+      width: 18px;
+      height: 18px;
+      background-color: #fff;
+    }
+  }
+  &-dot-selected {
+    background-color: $--color-primary;
+    border-color: $--color-primary;
+    &:after {
+      top: 1px;
+      left: 18px;
+    }
+  }
+  &-label {
+    vertical-align: top;
+    display: inline-block;
+    line-height: 22px;
+    transition: color 0.3s;
+  }
+  &-label-selected {
+    color: $--color-primary;
+  }
+  &-disabled {
+    cursor: not-allowed;
+    filter: grayscale(70%);
+  }
+  &-dot-disabled {
+    cursor: not-allowed;
+  }
+}

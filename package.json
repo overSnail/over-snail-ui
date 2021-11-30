@@ -1,6 +1,6 @@
 {
   "name": "over-snail-ui",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "vue.js学习项目，搭建UI组件库",
   "main": "lib/over-snail-ui.min.js",
   "dependencies": {

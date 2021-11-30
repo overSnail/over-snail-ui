@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import "common/var";
+@import "common/reset";
+@import "mixins/mixins";
+
+@include b(option) {
+  line-height: 32px;
+  padding: 0 40px 0 15px;
+  font-size: $--font-size-small;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    background-color: #f5f7fa;
+  }
+  &-selected {
+    font-weight: bold;
+    color: $--color-primary;
+    background-color: #f5f7fa;
+  }
+  &-disabled {
+    cursor: not-allowed;
+    color: #c0c4cc;
+  }
+  &-choose {
+    color: $--color-primary;
+  }
+  &-icon {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+  }
+}

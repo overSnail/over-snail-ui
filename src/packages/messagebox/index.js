@@ -3,7 +3,7 @@ import Vue from 'vue'
 
 import { isVNode } from '../../utils/assist'
 
-const MessageBox = (params) => {
+const MessageBox = function(params) {
   const Instance = new Vue({
     render(h) {
       return h(MessageBoxTemplate, {
@@ -21,7 +21,6 @@ const MessageBox = (params) => {
 
   return {
     alert(params) {
-
       if (isVNode(params.message)) {
         message.$slots.default = params.message
         params.message = undefined
@@ -32,7 +31,6 @@ const MessageBox = (params) => {
       message.alert(params)
     },
     confirm(params) {
-      
       if (isVNode(params.message)) {
         message.$slots.default = params.message
         params.message = undefined
@@ -42,7 +40,6 @@ const MessageBox = (params) => {
       message.alert(params)
     },
     prompt(params) {
-      
       if (isVNode(params.message)) {
         message.$slots.default = params.message
         params.message = undefined
@@ -63,7 +60,7 @@ let msgboxInstance
  * @param {string} title
  * @param {pbject} options
  */
-MessageBox.alert = (message, title, options) => {
+MessageBox.alert = function(message, title, options) {
   const params = { type: 'alert', message, title, ...options }
 
   // 如果单例不存在，先初始化单例
@@ -84,7 +81,7 @@ MessageBox.alert = (message, title, options) => {
  * @param {string} title
  * @param {pbject} options
  */
-MessageBox.confirm = (message, title, options) => {
+MessageBox.confirm = function(message, title, options) {
   const params = { type: 'confirm', message, title, ...options }
 
   // 如果单例不存在，先初始化单例
@@ -99,7 +96,7 @@ MessageBox.confirm = (message, title, options) => {
   })
 }
 
-MessageBox.prompt = (message, title, options) => {
+MessageBox.prompt = function(message, title, options) {
   const params = { type: 'prompt', message, title, ...options }
 
   // 如果单例不存在，先初始化单例

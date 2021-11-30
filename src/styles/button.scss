@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import 'common/var';
-@import 'mixins/mixins';
+@import "common/var";
+@import "mixins/mixins";
 
 @include b(button) {
   height: 36px;
@@ -109,8 +109,8 @@
     }
   }
   &-text {
-    background-color: $--color-text;
-    border-color: $--color-text;
+    background-color: #fff;
+    border-color: #fff;
     color: $--color-primary;
     &:focus,
     &:hover {
@@ -221,7 +221,7 @@
     pointer-events: none;
     &::before {
       pointer-events: none;
-      content: '';
+      content: "";
       position: absolute;
       left: -1px;
       top: -1px;

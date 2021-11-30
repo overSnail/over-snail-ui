@@ -161,9 +161,7 @@ export default {
   },
   methods: {
     showMsg() {
-      this.$alert("你的假期余额不足","温馨提示").then(res => {
-        this.$message.info("你点击了确定")
-      })
+      this.$alert("你的假期余额不足","温馨提示")
     },
     showConfirm() {
       this.$confirm("确认执行该删除操作？", "警告").then(res => {
@@ -184,10 +182,18 @@ export default {
     },
     showVNode() {
       const h = this.$createElement;
-      this.$alert(h('p', null, [
+
+      const vnode = h('p', null, [
             h('span', null, '类型：'),
             h('i', { style: 'color: teal' }, 'VNode')
-          ]), '温馨提示')
+          ])
+
+      window.$vnode = vnode
+
+      console.log("vnode", vnode)
+
+
+      this.$alert(vnode, '温馨提示')
     },
     showHTML() {
       this.$alert(`<strong>加粗和<i style="color: green">颜色</i></strong>`, 'HTML片段', {
