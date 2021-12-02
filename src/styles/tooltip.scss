@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@import "common/var";
+@import "common/reset";
+@import "mixins/mixins";
+
+@include b(tooltip) {
+  z-index: 2000;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  padding: 8px;
+  border-radius: 4px;
+  transform: translate(-50%, -100%);
+  // transform-origin: bottom center;
+  background-color: #303133;
+  color: #fff;
+  font-size: 12px;
+  &-light {
+    background-color: #fff;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.25);
+    color: $--font-color-main;
+  }
+  &-content {
+    max-width: 180px;
+  }
+  &-angle {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -8px;
+    left: 50%;
+    &-top-start {
+      border-bottom: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #303133;
+      transform: translate(-50%, 0%);
+      &-light {
+        border-top-color: #fff;
+      }
+    }
+    &-top {
+      border-bottom: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #303133;
+      transform: translate(-50%, 0%);
+      &-light {
+        border-top-color: #fff;
+      }
+    }
+    &-top-end {
+      border-bottom: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #303133;
+      transform: translate(-50%, 0%);
+      &-light {
+        border-top-color: #fff;
+      }
+    }
+
+    &-right-start {
+      border-left: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid #303133;
+      transform: translate(-100%, -50%);
+      &-light {
+        border-right-color: #fff;
+      }
+    }
+    &-right {
+      border-left: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid #303133;
+      transform: translate(-100%, -50%);
+      &-light {
+        border-right-color: #fff;
+      }
+    }
+    &-right-end {
+      border-left: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid #303133;
+      transform: translate(-100%, 0%);
+      &-light {
+        border-right-color: #fff;
+      }
+    }
+    &-bottom-start {
+      border-top: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #303133;
+      transform: translate(-50%, -100%);
+      &-light {
+        border-bottom-color: #fff;
+      }
+    }
+    &-bottom {
+      border-top: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #303133;
+      transform: translate(-50%, -100%);
+      &-light {
+        border-bottom-color: #fff;
+      }
+    }
+    &-bottom-end {
+      border-top: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #303133;
+      transform: translate(-50%, -100%);
+      &-light {
+        border-bottom-color: #fff;
+      }
+    }
+    &-left-start {
+      border-right: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid #303133;
+      transform: translate(0, -50%);
+      &-light {
+        border-left-color: #fff;
+      }
+    }
+    &-left {
+      border-right: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid #303133;
+      transform: translate(0, -50%);
+      &-light {
+        border-left-color: #fff;
+      }
+    }
+    &-left-end {
+      border-right: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid #303133;
+      transform: translate(0, -50%);
+      &-light {
+        border-left-color: #fff;
+      }
+    }
+  }
+  // 位置
+  &-placement {
+    &-top-start {
+      transform: translate(0, -100%);
+    }
+    &-top-end {
+      transform: translate(-100%, -100%);
+    }
+    &-right-start {
+      transform: translate(0, 0);
+    }
+    &-right {
+      transform: translate(0, -50%);
+    }
+    &-right-end {
+      transform: translate(0, -100%);
+    }
+    &-bottom-start {
+      transform: translate(0, 0);
+    }
+    &-bottom {
+      transform: translate(-50%, 0);
+    }
+    &-bottom-end {
+      transform: translate(-100%, 0);
+    }
+    &-left-start {
+      transform: translate(-100%, 0);
+    }
+    &-left {
+      transform: translate(-100%, -50%);
+    }
+    &-left-end {
+      transform: translate(-100%, -100%);
+    }
+  }
+}

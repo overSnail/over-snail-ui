@@ -5,7 +5,8 @@
     :class="{
       'my-option-selected': selected,
       'my-option-disabled': disabled,
-      'my-option-choose': choose
+      'my-option-choose': choose,
+      'my-option-multi': multi
     }"
     @click="onClick"
   >
@@ -22,6 +23,7 @@ export default {
   data() {
     return {
       visible: true,
+      multi: false,
       selected: false,
       choose: false
     };

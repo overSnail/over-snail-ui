@@ -10,7 +10,13 @@ import Option from "./packages/option";
 import OptionGroup from "./packages/option-group";
 import Switch from "./packages/switch";
 import DatePicker from "./packages/datepicker";
+
+// 数据展示
 import Tag from "./packages/tag";
+import Tooltip, { TooltipDirective } from "./packages/tooltip";
+import Popover from "./packages/popover";
+import Popconfirm from "./packages/popconfirm";
+import Dialog from "./packages/dialog";
 
 import Alert from "./packages/alert";
 import Message from "./packages/message";
@@ -32,10 +38,25 @@ const components = {
   OptionGroup,
   DatePicker,
   Switch,
-  Tag
+  Tag,
+  Tooltip,
+  Popover,
+  Popconfirm,
+  Dialog
 };
 
 const install = function(Vue, options = {}) {
+  let config = {
+    // 弹窗的默认初始zindex
+    zIndex: 2000
+  };
+
+  // UI的一些全局配置
+  Vue.prototype.$osUI = {
+    ...config,
+    options
+  };
+
   Object.keys(components).forEach(key => {
     Vue.component(`os${key}`, components[key]);
   });
@@ -50,6 +71,7 @@ const install = function(Vue, options = {}) {
 
   // loading组件
   Vue.directive("loading", LoadingDirective);
+  Vue.directive("tooltip", TooltipDirective);
 };
 
 export default install;

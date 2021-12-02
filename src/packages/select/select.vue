@@ -146,7 +146,7 @@ export default {
       validator(value) {
         return oneOf(value, ["mini", "small", "medium", "large"]);
       },
-      default: "large"
+      default: "medium"
     },
     // 是否可搜索
     filterable: {
@@ -221,12 +221,19 @@ export default {
     },
     visible(newVal) {
       this.$emit("visible-change", newVal);
+    },
+    multiple: {
+      handler(value) {
+        this.setMultiOptionStyle(value);
+      },
+      immediate: true
     }
   },
   created() {
     this.$on("on-option-add", child => {
       child && this.options.push(child);
       this.syncValue(this.value);
+      this.setMultiOptionStyle(this.multiple);
     });
 
     this.$on("on-option-select", child => {
@@ -398,6 +405,12 @@ export default {
         hasOptions = !!this.options.find(d => d.visible);
       }
       this.hasOptions = hasOptions;
+    },
+    /**
+     * @description 多选模式下，选项的padding-right放大
+     */
+    setMultiOptionStyle(multi) {
+      this.options.forEach(d => (d.multi = multi));
     },
     handleTagClose(opt) {
       if (this.disabled) return;

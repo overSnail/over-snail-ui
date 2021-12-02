@@ -10,7 +10,8 @@ $mini-height: 26px;
 
 @include b(select) {
   position: relative;
-  width: 240px;
+  width: 220px;
+  display: inline-block;
   &-inner {
     position: relative;
     &-input {
@@ -84,7 +85,7 @@ $mini-height: 26px;
     }
   }
   &-options {
-    min-width: 240px;
+    min-width: 220px;
     max-height: 160px;
     transform-origin: center top;
     z-index: 2367;

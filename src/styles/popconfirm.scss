@@ -1,0 +1,164 @@
+@charset "UTF-8";
+@import "common/var";
+@import "common/reset";
+@import "mixins/mixins";
+
+@include b(popconfirm) {
+  z-index: 2000;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  padding: 8px;
+  border-radius: 4px;
+  transform: translate(-50%, -100%);
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.25);
+  color: $--font-color-main;
+  font-size: 14px;
+  &-content {
+    padding: 5px;
+    min-width: 150px;
+    &-title {
+      &-icon {
+        font-size: 16px;
+        color: $--color-warning;
+      }
+      font-size: 14px;
+      margin: 10px 0;
+      line-height: 1;
+    }
+    &-control {
+      padding-top: 10px;
+      text-align: right;
+    }
+  }
+  &-angle {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -8px;
+    left: 50%;
+    &-top-start {
+      border-bottom: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #fff;
+      transform: translate(-50%, 0%);
+    }
+    &-top {
+      border-bottom: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #fff;
+      transform: translate(-50%, 0%);
+    }
+    &-top-end {
+      border-bottom: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #fff;
+      transform: translate(-50%, 0%);
+    }
+
+    &-right-start {
+      border-left: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid #fff;
+      transform: translate(-100%, -50%);
+    }
+    &-right {
+      border-left: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid #fff;
+      transform: translate(-100%, -50%);
+    }
+    &-right-end {
+      border-left: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid #fff;
+      transform: translate(-100%, 0%);
+    }
+    &-bottom-start {
+      border-top: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #fff;
+      transform: translate(-50%, -100%);
+    }
+    &-bottom {
+      border-top: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #fff;
+      transform: translate(-50%, -100%);
+    }
+    &-bottom-end {
+      border-top: none;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #fff;
+      transform: translate(-50%, -100%);
+    }
+    &-left-start {
+      border-right: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid #fff;
+      transform: translate(0, -50%);
+    }
+    &-left {
+      border-right: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid #fff;
+      transform: translate(0, -50%);
+    }
+    &-left-end {
+      border-right: none;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid #fff;
+      transform: translate(0, -50%);
+    }
+  }
+  // 位置
+  &-placement {
+    &-top-start {
+      transform: translate(0, -100%);
+    }
+    &-top-end {
+      transform: translate(-100%, -100%);
+    }
+    &-right-start {
+      transform: translate(0, 0);
+    }
+    &-right {
+      transform: translate(0, -50%);
+    }
+    &-right-end {
+      transform: translate(0, -100%);
+    }
+    &-bottom-start {
+      transform: translate(0, 0);
+    }
+    &-bottom {
+      transform: translate(-50%, 0);
+    }
+    &-bottom-end {
+      transform: translate(-100%, 0);
+    }
+    &-left-start {
+      transform: translate(-100%, 0);
+    }
+    &-left {
+      transform: translate(-100%, -50%);
+    }
+    &-left-end {
+      transform: translate(-100%, -100%);
+    }
+  }
+}
