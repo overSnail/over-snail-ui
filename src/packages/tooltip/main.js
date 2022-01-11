@@ -65,7 +65,7 @@ export default {
   },
   mounted() {
     this.referenceElm = this.$el;
-    on(this.referenceElm, "mouseenter", this.showTip);
+    on(this.referenceElm, "mousemove", this.showTip);
     on(this.referenceElm, "mouseleave", this.hideTip);
   },
   methods: {

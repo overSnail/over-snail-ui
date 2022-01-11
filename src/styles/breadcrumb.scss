@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import "common/var";
+@import "common/reset";
+@import "mixins/mixins";
+
+@include b(breadcrumb) {
+  font-size: 14px;
+  line-height: 1;
+  &-item {
+    &:last-child {
+      .my-breadcrumb-item-separator {
+        display: none;
+      }
+    }
+  }
+}

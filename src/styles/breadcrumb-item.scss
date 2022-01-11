@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@import "common/var";
+@import "common/reset";
+@import "mixins/mixins";
+
+@include b(breadcrumb-item) {
+  &-link {
+    cursor: pointer;
+    font-weight: bold;
+    &:hover {
+      color: $--color-primary;
+    }
+  }
+  &-separator {
+    padding: 0 3px;
+  }
+}

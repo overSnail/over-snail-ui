@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import 'common/var';
-@import 'mixins/mixins';
+@import "common/var";
+@import "mixins/mixins";
 
 @include b(checkbox) {
   box-sizing: border-box;
@@ -23,7 +23,7 @@
     border-radius: 2px;
     border: 1px solid $--border-color;
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       box-sizing: border-box;
       width: 7px;
@@ -50,6 +50,26 @@
         border-color: #edf2fc;
       }
     }
+    &-indeterminate {
+      background: $--color-primary;
+      border-color: $--color-primary;
+      &:after {
+        transform: rotate(0deg);
+        border-right: none;
+        width: 8px;
+        height: 0;
+        left: 2px;
+        top: 5.5px;
+        border-color: #fff;
+      }
+      &-disabled {
+        background-color: #edf2fc;
+        border-color: $--color-disabled;
+        &:after {
+          border-color: $--color-disabled !important;
+        }
+      }
+    }
     &-button {
       display: none;
     }
@@ -61,11 +81,11 @@
   }
   &-checked {
     color: $--color-primary;
-    border-color: $--color-primary!important;
+    border-color: $--color-primary !important;
     &-button {
       color: #fff;
-      background-color: $--color-primary!important;
-      border-color: $--border-color!important;
+      background-color: $--color-primary !important;
+      border-color: $--border-color !important;
     }
   }
   &-disabled {

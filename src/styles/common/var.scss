@@ -46,3 +46,11 @@ $--color-disabled: #c0c4cc;
     border-radius: 10px;
   }
 }
+
+:export {
+  primaryColor: $--color-primary;
+  textColor: $--color-text;
+  successColor: $--color-success;
+  warningColor: $--color-warning;
+  errorColor: $--color-error;
+}

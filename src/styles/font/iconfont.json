@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "5388002",
+      "name": "日期_o",
+      "font_class": "date",
+      "unicode": "ebb1",
+      "unicode_decimal": 60337
+    },
+    {
+      "icon_id": "11372699",
+      "name": "时间",
+      "font_class": "time",
+      "unicode": "e8b8",
+      "unicode_decimal": 59576
+    },
+    {
+      "icon_id": "479193",
+      "name": "箭头",
+      "font_class": "arrow-right",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "1316288",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "8721203",
+      "name": "勾选",
+      "font_class": "gouxuan",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
       "icon_id": "810221",
       "name": "箭头",
       "font_class": "bottom",

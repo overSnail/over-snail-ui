@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade">
+  <transition name="tooltip-fade">
     <div
       ref="tooltip"
       class="my-tooltip"
@@ -46,7 +46,7 @@ export default {
   },
   computed: {
     panelVislbe() {
-      return this.content && (this.visible || this.isFocus);
+      return this.visible || this.isFocus;
     }
   },
   mounted() {

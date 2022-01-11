@@ -12,6 +12,9 @@
 @import "datepicker";
 @import "datepage";
 @import "switch";
+@import "slider";
+@import "time-picker";
+@import "time-picker-range";
 
 // 数据展示
 @import "tag";
@@ -19,6 +22,12 @@
 @import "popover";
 @import "popconfirm";
 @import "dialog";
+@import "progress";
+@import "tree";
+
+// 导航组件
+@import "breadcrumb";
+@import "breadcrumb-item";
 
 // 通知组件
 @import "alert";
@@ -26,3 +35,7 @@
 @import "message";
 @import "notice";
 @import "messagebox";
+
+// 其他
+@import "collapse";
+@import "collapse-item";

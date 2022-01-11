@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@import "common/var";
+@import "common/reset";
+@import "mixins/mixins";
+
+@include b(collapse-item) {
+  border-top: 1px solid #eee;
+  &:last-child {
+    border-bottom: 1px solid #eee;
+  }
+  &-title {
+    padding: 10px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    &-disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+  &-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+    transition: transform 0.3s;
+    &-expand {
+      transform: translateY(-50%) rotate(360deg);
+    }
+  }
+  &-wrap {
+    overflow: hidden;
+    transition: height 0.3s linear;
+  }
+  &-content {
+    padding: 10px;
+  }
+}

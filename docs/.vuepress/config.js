@@ -28,13 +28,15 @@ module.exports = {
             "basic/input-number",
             "basic/select",
             // "basic/datepicker",
-            "basic/switch"
+            "basic/switch",
+            // "basic/slider",
+            "basic/timepicker"
           ]
         },
         {
           title: "数据展示",
           collapsable: false,
-          children: ["data/tag"]
+          children: ["data/tag", "data/progress", "data/tree"]
         },
         {
           title: "通知组件",
@@ -48,13 +50,19 @@ module.exports = {
           ]
         },
         {
+          title: "导航组件",
+          collapsable: false,
+          children: ["navigation/breadcrumb"]
+        },
+        {
           title: "其他组件",
           collapsable: false,
           children: [
             "other/dialog",
             "other/tooltip",
             "other/popover",
-            "other/popconfirm"
+            "other/popconfirm",
+            "other/collapse"
           ]
         }
       ]

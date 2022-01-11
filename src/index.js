@@ -10,6 +10,9 @@ import Option from "./packages/option";
 import OptionGroup from "./packages/option-group";
 import Switch from "./packages/switch";
 import DatePicker from "./packages/datepicker";
+import Slider from "./packages/slider";
+import TimePicker from "./packages/time-picker";
+import TimePickerRange from "./packages/time-picker-range";
 
 // 数据展示
 import Tag from "./packages/tag";
@@ -17,12 +20,22 @@ import Tooltip, { TooltipDirective } from "./packages/tooltip";
 import Popover from "./packages/popover";
 import Popconfirm from "./packages/popconfirm";
 import Dialog from "./packages/dialog";
+import Progress from "./packages/progress";
+import Tree from "./packages/tree";
+
+// 导航组件
+import Breadcrumb from "./packages/breadcrumb";
+import BreadcrumbItem from "./packages/breadcrumb-item";
 
 import Alert from "./packages/alert";
 import Message from "./packages/message";
 import Notice from "./packages/notice";
 import Loading, { LoadingDirective } from "./packages/loading";
 import MessageBox from "./packages/messagebox";
+
+// 其他
+import Collapse from "./packages/collapse";
+import CollapseItem from "./packages/collapse-item";
 
 const components = {
   Button,
@@ -42,7 +55,16 @@ const components = {
   Tooltip,
   Popover,
   Popconfirm,
-  Dialog
+  Dialog,
+  Progress,
+  Slider,
+  Breadcrumb,
+  BreadcrumbItem,
+  Tree,
+  TimePicker,
+  TimePickerRange,
+  Collapse,
+  CollapseItem
 };
 
 const install = function(Vue, options = {}) {

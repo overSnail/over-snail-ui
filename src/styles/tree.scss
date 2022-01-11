@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import "common/var";
+@import "common/reset";
+@import "mixins/mixins";
+
+@include b(tree) {
+  // 树节点
+  &-node {
+    font-size: 14px;
+    &-label {
+      height: 24px;
+      line-height: 24px;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      &:hover {
+        background-color: #f5f7f9;
+      }
+    }
+    &-angle {
+      display: inline-block;
+      width: 24px;
+      line-height: 24px;
+      height: 24px;
+      text-align: center;
+      transition: transform 0.3s;
+      &-expand {
+        transform: rotate(90deg);
+      }
+    }
+    &-content {
+      padding-left: 18px;
+      overflow: hidden;
+      transition: height 0.3s;
+    }
+    &-checkbox {
+      height: auto;
+      margin-right: 0;
+      vertical-align: inherit;
+    }
+    &-loading {
+      margin-right: 5px;
+      font-size: 12px;
+      i:before {
+        display: inline-block;
+        animation: loading 1.5s linear infinite;
+      }
+    }
+  }
+  &-empty {
+    font-size: 13px;
+    padding: 20px;
+    text-align: center;
+  }
+  @keyframes loading {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
