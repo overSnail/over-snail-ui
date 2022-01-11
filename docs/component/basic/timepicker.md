@@ -15,7 +15,7 @@ pageClass: os-page-class
   <os-time-picker
     v-model="time1"
     :picker-options="{
-      selectableRange: '14:00:00-14:30:00'
+      selectableRange: '08:30:21-21:35:08'
     }"
   />
   <span>{{ time1 }}</span>
@@ -53,7 +53,7 @@ export default {
   <os-time-picker-range
     v-model="time2"
     :picker-options="{
-      selectableRange: ['14:10:00-14:40:00', '16:10:00-21:05:00']
+      selectableRange: ['08:10:00-12:40:00', '16:10:00-21:05:00']
     }"
   />
   <span>{{ time2 }}</span>
@@ -64,7 +64,7 @@ export default {
   <os-time-picker-range
     v-model="time2"
     :picker-options="{
-      selectableRange: ['14:10:00-14:40:00', '16:10:00-21:05:00']
+      selectableRange: ['08:10:00-12:40:00', '16:10:00-21:05:00']
     }"
   />
   <span>{{ time2 }}</span>

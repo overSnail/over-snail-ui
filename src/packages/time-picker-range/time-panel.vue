@@ -88,18 +88,20 @@ export default {
      */
     setEndTimeRange(startTime) {
       let min = startTime;
+      let max = "23:59:59";
       if (
         this.pickerOptions &&
         this.pickerOptions.selectableRange &&
         this.pickerOptions.selectableRange.length === 2
       ) {
-        const limit = this.pickerOptions.selectableRange[1].split("-")[0];
-        if (startTime <= limit) {
-          min = limit;
+        const limit = this.pickerOptions.selectableRange[1].split("-");
+        max = limit[1];
+        if (startTime <= limit[0]) {
+          min = limit[0];
         }
       }
 
-      this.endTimeRange = `${min}-23:59:59`;
+      this.endTimeRange = `${min}-${max}`;
     }
   }
 };

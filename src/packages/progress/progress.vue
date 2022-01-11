@@ -97,7 +97,17 @@
 </template>
 
 <script>
-import scssVar from "../../styles/common/var.scss";
+// todo: 需要从scss中导入样式变量
+// import scssVar from "../../styles/common/var.scss";
+
+const scssVar = {
+  primaryColor: "#00554a",
+  textColor: "#909399",
+  successColor: "#67c23a",
+  warningColor: "#e6a23c",
+  errorColor: "#f56c6c"
+};
+
 import { oneOf } from "../../utils/assist";
 import circle from "./circle.vue";
 import dashboard from "./dashboard.vue";
@@ -181,6 +191,7 @@ export default {
           return this.color(this.percentage);
         }
       } else {
+        // console.log("颜色", scssVar[`${this.status}Color`]);
         return scssVar[`${this.status}Color`];
       }
     }
